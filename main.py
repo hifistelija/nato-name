@@ -13,6 +13,12 @@ def name_to_nato(name):
     return ", ".join(nato_spelling)
 
 
-name = input("Enter you name: ")
+while True:
+    name = input("Enter you name: ")
+    if name.replace(" ", "").isalpha():
+        break
+    else:
+        print("Please enter a name with only alphabetic characters.")
+
 nato_name = name_to_nato(name)
 print(f"Your name in the NATO phonetic alphabet: {nato_name}")
